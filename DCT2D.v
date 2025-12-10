@@ -3,7 +3,7 @@ module DCT2D (
     input wire rst_n,
     // 輸入: 9-bit 有號數
     input wire signed [8:0] x0, x1, x2, x3, x4, x5, x6, x7,
-    // 輸出: 改為 18-bit 有號數
+    // 輸出: 18-bit 有號數
     output wire signed [17:0] z0, z1, z2, z3, z4, z5, z6, z7,
     output reg ready
 );
@@ -25,7 +25,6 @@ module DCT2D (
     // =========================================================
     // 2. Row DCT (Stage 1)
     // =========================================================
-    // 第一級輸出改為 18-bit
     wire signed [17:0] row_out [0:7];
 
     DCT1D #(
