@@ -2,10 +2,10 @@
 
 module TM;
 
-parameter 	IN_WORD_SIZE = 8;
-parameter 	OUT_WORD_SIZE = 18;
-parameter 	DATA_COUNT = 256*256/8;
-parameter   latency =24;
+parameter 	IN_WORD_SIZE    = 8;
+parameter 	OUT_WORD_SIZE   = 18;
+parameter 	DATA_COUNT      = 256*256/8;
+parameter   latency         = 24;
 
 
 reg 							clk, rst_n;
