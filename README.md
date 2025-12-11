@@ -1,1 +1,1 @@
-# 2D-Forward-Discrete-Cosine-Transform-Hardware-Design
+# 2D-Forward-Discrete-Cosine-Transform-Hardware
