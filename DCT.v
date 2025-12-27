@@ -1,5 +1,5 @@
 /**
- * @file DCT2D.v
+ * @file DCTD.v
  * @brief 8x8 2D Discrete Cosine Transform (DCT) Module using Row-Column Decomposition.
  *
  * Implements a 2D DCT by performing 1D DCTs first on rows,
