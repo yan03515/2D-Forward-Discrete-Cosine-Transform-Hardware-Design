@@ -1,21 +1,21 @@
-%% ========================================================================
-%% 8x8 2D-DCT Hardware Output Verification & Image Reconstruction
-%% ========================================================================
+% ========================================================================
+% 8x8 2D-DCT Hardware Output Verification & Image Reconstruction
+% ========================================================================
 %  Project: Forward DCT Circuit Design (FDCT) [cite: 6]
 %  Target Image: Lena 256x256 [cite: 29, 30]
 %  Algorithm: Row-Column Decomposition [cite: 68, 72]
-%% ========================================================================
+% ========================================================================
 
 clear; clc; close all;
 
-%% Parameters Setup
+% Parameters Setup
 hex_width  = 5;          % Minimum 5 hex chars for 18-bit data (2^18 = 262144)
 bit_depth  = 18;         % Signed 18-bit output 
 block_size = 8;          % 8x8 Micro block DCT
 w          = 256;        % Image Width
 h          = 256;        % Image Height
 
-%% Load Original Image (Ground Truth)
+% Load Original Image (Ground Truth)
 img_path = 'lena_256.bmp';
 if exist(img_path, 'file')
     [lena_gt, ~] = imread(img_path);
@@ -24,7 +24,7 @@ else
     error('Error: Could not find original image file: %s', img_path);
 end
 
-%% Read and Parse Hardware Output
+% Read and Parse Hardware Output
 data_path = 'dct_out.txt';
 if exist(data_path, 'file')
     fid         = fopen(data_path, 'r');
@@ -67,7 +67,7 @@ for k = 1:total_coeffs
     dct_coeffs(k) = val;
 end
 
-%% Image Reconstruction (Block-based IDCT Processing)
+% Image Reconstruction (Block-based IDCT Processing)
 % Perform software-based IDCT to verify hardware precision
 reconstructed_img = zeros(h, w);
 idx               = 1;
@@ -93,7 +93,7 @@ for r = 1:block_size:h
     end
 end
 
-%% Post-processing and PSNR Evaluation
+% Post-processing and PSNR Evaluation
 % Clip values to valid 8-bit range (0-255)
 reconstructed_img(reconstructed_img > 255) = 255;
 reconstructed_img(reconstructed_img < 0) = 0;
@@ -109,4 +109,5 @@ fprintf('   DCT Hardware Verification Result\n');
 fprintf('============================================\n');
 psnr(lena_gt, reconstructed_img); 
 fprintf('--------------------------------------------\n');
+
 
