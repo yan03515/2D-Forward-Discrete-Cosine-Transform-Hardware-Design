@@ -10,7 +10,7 @@ This repository contains the Verilog HDL implementation for a high-performance 8
 ### <ins>Architecture Overview<ins>
 The design follows a modular approach to transform an $8 \times 8$ pixel block $f(x,y)$ into frequency coefficients $F(u,v)$.
 
-**- Top Module (2D-DCT)**
+**- Top Module (DCT)**
 
 The top-level design coordinates data flow through six primary stages:
 1. Input Extension: Performs sign extension on 9-bit input data to 12-bit to prevent overflow during intermediate calculations.
@@ -20,7 +20,7 @@ The top-level design coordinates data flow through six primary stages:
 5. Transpose Buffer 2: Performs the second matrix transposition to restore the correct output order.
 6. Output Assignment: Outputs the final 18-bit coefficients accompanied by a ready signal.
 
-**- Submodule (1D-DCT)**
+**- Submodule (DCT1D)**
 
 The 1D-DCT core is implemented as a 4-stage pipeline:
 - Stage 1 (Butterflies): Executes addition and subtraction to separate even and odd components.
