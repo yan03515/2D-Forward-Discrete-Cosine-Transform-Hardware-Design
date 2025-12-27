@@ -40,6 +40,7 @@ The 1D-DCT core is implemented as a 4-stage pipeline:
     <td>Input</td>
     <td>x0 ~ x7</td>
     <td>9-bit</td>
+    <td>signed bit</td>
   </tr>
     <td>Input</td>
     <td>clk</td>
@@ -53,6 +54,7 @@ The 1D-DCT core is implemented as a 4-stage pipeline:
     <td>Output</td>
     <td>z0 ~ z7</td>
     <td>18-bit</td>
+    <td>signed bit</td>
   </tr>
     <td>Output</td>
     <td>ready</td>
