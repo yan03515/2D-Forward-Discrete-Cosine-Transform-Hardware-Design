@@ -1,9 +1,9 @@
 % ========================================================================
 % 8x8 2D-DCT Hardware Output Verification & Image Reconstruction
 % ========================================================================
-%  Project: Forward DCT Circuit Design (FDCT) [cite: 6]
-%  Target Image: Lena 256x256 [cite: 29, 30]
-%  Algorithm: Row-Column Decomposition [cite: 68, 72]
+%  Project: Forward DCT Circuit Design (FDCT)
+%  Target Image: Lena 256x256
+%  Algorithm: Row-Column Decomposition
 % ========================================================================
 
 clear; clc; close all;
@@ -109,5 +109,6 @@ fprintf('   DCT Hardware Verification Result\n');
 fprintf('============================================\n');
 psnr(lena_gt, reconstructed_img); 
 fprintf('--------------------------------------------\n');
+
 
 
