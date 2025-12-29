@@ -66,6 +66,9 @@ The 1D-DCT core is implemented as a 4-stage pipeline:
 ### <ins>Verification<ins>
 
 Functionality and precision were verified by reconstructing the image through a software-based Inverse DCT (IDCT).
+The results significantly exceed the design requirements:
+- PSNR (Peak Signal-to-Noise Ratio): +48.97 dB
+- MSE (Mean Squared Error): 0.82435
 
 ### <ins>Hardware Performance<ins>
 
