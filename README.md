@@ -69,6 +69,7 @@ Functionality and precision were verified by reconstructing the image through a 
 The results significantly exceed the design requirements:
 - PSNR (Peak Signal-to-Noise Ratio): +48.97 dB
 - MSE (Mean Squared Error): 0.82435
+<img width="1119" height="511" alt="螢幕擷取畫面 2025-12-29 235317" src="https://github.com/user-attachments/assets/036ef2d9-8d0c-4079-ace7-264ee612a02c" />
 
 ### <ins>Hardware Performance<ins>
 
